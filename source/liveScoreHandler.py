@@ -30,7 +30,7 @@ def getArrayOfCurrentlyRunningFixtures():
 	con = sql.connect('rCricket.db',detect_types=sql.PARSE_COLNAMES)
 	cur = con.cursor()
 	currentGMT=datetime.datetime.utcnow()
-	TwelveHoursAgo=currentGMT - datetime.timedelta(0,0,0,0,0,10) #is actually 10 hours ago
+	TwelveHoursAgo=currentGMT - datetime.timedelta(0,0,0,0,0,24) #is actually 10 hours ago
 	cur.execute("select matchThreadLink,liveThreadLink from MatchThreads where creationTime between ? and ?",(TwelveHoursAgo,currentGMT))
 	data=cur.fetchall()
 	return data
