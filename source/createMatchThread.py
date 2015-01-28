@@ -99,7 +99,7 @@ def createMatchThreadWrapper(r,threadTitle,liveThreadURL,source,subreddit):
 
     #By this line, the submission has been edited and we can tell the requestor about it.
     sendEmail("Started match thread","Created a new match thread "+str(submission.url))
-    return [True,"Match thread successfully created. [Here's the link](" + str(submission.url) +")."]
+    return [True,"For once I was hoping I could relax, enjoy a beer and just watch the match but no. You just had to make me do some fucking work?!. [Here's the link, cunt](" + str(submission.url) +")."]
     
 
 
